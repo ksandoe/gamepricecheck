@@ -113,9 +113,9 @@ The client talks **only** to the Express API. The API is the only component hold
 
 | Concern | Choice |
 | --- | --- |
-| Framework | React 18 + Vite |
+| Framework | React 19 + Vite 8 |
 | Language | JavaScript (ES modules); TypeScript may be adopted later |
-| Routing | React Router (URL holds search query + filters so results are shareable/bookmarkable) |
+| Routing | React Router 7 (URL holds search query + filters so results are shareable/bookmarkable) |
 | Data fetching | TanStack Query (caching, loading/error states, retries) |
 | Styling | CSS Modules or Tailwind; mobile-first breakpoints (base = phone, `md` = tablet, `lg` = desktop) |
 | PWA | `vite-plugin-pwa` — manifest, icons, service worker caching the app shell (not prices) |
@@ -126,7 +126,7 @@ The client talks **only** to the Express API. The API is the only component hold
 
 | Concern | Choice |
 | --- | --- |
-| Runtime | Node.js 20 LTS + Express |
+| Runtime | Node.js 22+ LTS + Express 5 |
 | Structure | `routes/` → `controllers/` → `services/` → `adapters/` (one adapter per data source) |
 | Validation | `zod` for query/param validation |
 | Data access | `@supabase/supabase-js` with the service-role key (server-side only) |

@@ -30,4 +30,29 @@ The original project specification is in [Specification_1 (2).pdf](<Specificatio
 
 ## Getting started
 
-Setup instructions will be added as the `client` and `api` packages are scaffolded (see tasks T-01 to T-03 in [docs/TASKS.md](docs/TASKS.md)).
+Prerequisites: Node.js 22+, and Docker if you want to run Supabase locally.
+
+```bash
+# API (http://localhost:3000)
+cd api
+cp .env.example .env
+npm install
+npm run dev
+```
+
+```bash
+# Client (http://localhost:5173, proxies /api to the API)
+cd client
+npm install
+npm run dev
+```
+
+```bash
+# Database: local Supabase with migrations + seed data
+npx supabase start
+npx supabase db reset
+```
+
+Copy the `API URL` and `service_role key` printed by `npx supabase status` into `api/.env`.
+
+Each package has `npm run lint`, `npm test`, and `npm run format`; the client also has `npm run build`.
