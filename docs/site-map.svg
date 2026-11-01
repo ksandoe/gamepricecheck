@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 730" width="1160" height="730" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+    </marker>
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9ca3af"/>
+    </marker>
+    <style>
+      .title { font-size: 15px; font-weight: 700; fill: #111827; }
+      .note { font-size: 11.5px; fill: #374151; }
+      .tag { font-size: 10.5px; font-weight: 700; letter-spacing: .04em; }
+      .edge { fill: none; stroke: #374151; stroke-width: 1.6; }
+      .edge-future { fill: none; stroke: #9ca3af; stroke-width: 1.6; stroke-dasharray: 6 4; }
+      .label { font-size: 11px; font-style: italic; fill: #4b5563; }
+      .v1 { fill: #e8f0fe; stroke: #1a56db; stroke-width: 1.6; }
+      .root { fill: #1a56db; stroke: #1e3a8a; stroke-width: 1.6; }
+      .ext { fill: #fff4e5; stroke: #c2410c; stroke-width: 1.6; stroke-dasharray: 3 3; }
+      .future { fill: #f3f4f6; stroke: #9ca3af; stroke-width: 1.6; stroke-dasharray: 6 4; }
+    </style>
+  </defs>
+
+  <rect width="1160" height="730" fill="#ffffff"/>
+  <text x="580" y="20" text-anchor="middle" font-size="13" fill="#6b7280">GamePriceCheck — Site Map (v1 MVP)</text>
+
+  <!-- ===== Edges ===== -->
+  <!-- Home -> level 1 -->
+  <path class="edge" d="M580,115 V160"/>
+  <path class="edge" d="M300,160 H700"/>
+  <path class="edge" d="M300,160 V202" marker-end="url(#arrow)"/>
+  <path class="edge" d="M700,160 V202" marker-end="url(#arrow)"/>
+  <path class="edge-future" d="M700,160 H940 V202" marker-end="url(#arrow-grey)"/>
+  <text class="label" x="312" y="152">submit search or tap a category</text>
+
+  <!-- Search Results -> level 2 -->
+  <path class="edge" d="M300,285 V330"/>
+  <path class="edge" d="M150,330 H430"/>
+  <path class="edge" d="M150,330 V372" marker-end="url(#arrow)"/>
+  <path class="edge" d="M430,330 V372" marker-end="url(#arrow)"/>
+  <text class="label" x="40" y="322">tap "Filters"</text>
+  <text class="label" x="442" y="352">tap a product card</text>
+
+  <!-- Product Detail -> Seller Website -->
+  <path class="edge" d="M430,455 V542" marker-end="url(#arrow)"/>
+  <text class="label" x="442" y="502">tap "Go to seller"</text>
+
+  <!-- Login -> Dashboard (future) -->
+  <path class="edge-future" d="M940,285 V372" marker-end="url(#arrow-grey)"/>
+  <text class="label" x="952" y="332">after login</text>
+
+  <!-- Dashboard -> Saved / Alerts (future) -->
+  <path class="edge-future" d="M940,455 V500"/>
+  <path class="edge-future" d="M845,500 H1040"/>
+  <path class="edge-future" d="M845,500 V542" marker-end="url(#arrow-grey)"/>
+  <path class="edge-future" d="M1040,500 V542" marker-end="url(#arrow-grey)"/>
+
+  <!-- ===== Level 0 ===== -->
+  <rect class="root" x="440" y="32" width="280" height="83" rx="10"/>
+  <text x="580" y="58" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Home / Search</text>
+  <text x="580" y="78" text-anchor="middle" font-size="11.5" fill="#dbeafe">search bar · Games / Consoles / Accessories</text>
+  <text x="580" y="95" text-anchor="middle" font-size="11.5" fill="#dbeafe">landing page · no login required</text>
+  <text x="580" y="110" text-anchor="middle" font-size="10.5" fill="#bfdbfe">route: /</text>
+
+  <!-- ===== Level 1 ===== -->
+  <rect class="v1" x="185" y="202" width="230" height="83" rx="8"/>
+  <text class="title" x="300" y="226" text-anchor="middle">Search Results</text>
+  <text class="note" x="300" y="245" text-anchor="middle">product cards · lowest price · # sellers</text>
+  <text class="note" x="300" y="261" text-anchor="middle">filter chips · sort · availability</text>
+  <text class="note" x="300" y="277" text-anchor="middle" fill="#6b7280">/search?q=&amp;category=&amp;filters</text>
+
+  <rect class="v1" x="590" y="202" width="220" height="83" rx="8"/>
+  <text class="title" x="700" y="226" text-anchor="middle">About / Help</text>
+  <text class="note" x="700" y="245" text-anchor="middle">how it works</text>
+  <text class="note" x="700" y="261" text-anchor="middle">condition &amp; reliability guide</text>
+  <text class="note" x="700" y="277" text-anchor="middle" fill="#6b7280">/about · footer link</text>
+
+  <rect class="future" x="835" y="202" width="210" height="83" rx="8"/>
+  <text class="tag" x="940" y="220" text-anchor="middle" fill="#6b7280">FUTURE (v2)</text>
+  <text class="title" x="940" y="240" text-anchor="middle" fill="#4b5563">Login / Sign Up</text>
+  <text class="note" x="940" y="259" text-anchor="middle" fill="#6b7280">optional · only for</text>
+  <text class="note" x="940" y="275" text-anchor="middle" fill="#6b7280">personalized features</text>
+
+  <!-- ===== Level 2 ===== -->
+  <rect class="v1" x="35" y="372" width="230" height="83" rx="8"/>
+  <text class="title" x="150" y="396" text-anchor="middle">Filter &amp; Sort Panel</text>
+  <text class="note" x="150" y="415" text-anchor="middle">bottom sheet (phone) / sidebar</text>
+  <text class="note" x="150" y="431" text-anchor="middle">condition · price · retailer</text>
+  <text class="note" x="150" y="447" text-anchor="middle">developer · year · discount</text>
+
+  <rect class="v1" x="315" y="372" width="230" height="83" rx="8"/>
+  <text class="title" x="430" y="396" text-anchor="middle">Product Detail</text>
+  <text class="note" x="430" y="415" text-anchor="middle">details · seller comparison</text>
+  <text class="note" x="430" y="431" text-anchor="middle">price · discount · condition</text>
+  <text class="note" x="430" y="447" text-anchor="middle">stock · seller reliability</text>
+
+  <text class="label" x="35" y="472">"Apply" returns to updated results</text>
+
+  <rect class="future" x="835" y="372" width="210" height="83" rx="8"/>
+  <text class="tag" x="940" y="390" text-anchor="middle" fill="#6b7280">FUTURE (v2)</text>
+  <text class="title" x="940" y="410" text-anchor="middle" fill="#4b5563">Account Dashboard</text>
+  <text class="note" x="940" y="429" text-anchor="middle" fill="#6b7280">logged-in users only</text>
+  <text class="note" x="940" y="445" text-anchor="middle" fill="#6b7280">profile · settings</text>
+
+  <!-- ===== Level 3 ===== -->
+  <rect class="ext" x="315" y="542" width="230" height="83" rx="8"/>
+  <text class="tag" x="430" y="560" text-anchor="middle" fill="#c2410c">EXTERNAL</text>
+  <text class="title" x="430" y="580" text-anchor="middle">Seller / Retailer Website</text>
+  <text class="note" x="430" y="599" text-anchor="middle">opens in new tab via /api/out/:id</text>
+  <text class="note" x="430" y="615" text-anchor="middle">purchase completed by seller</text>
+
+  <rect class="future" x="755" y="542" width="180" height="83" rx="8"/>
+  <text class="tag" x="845" y="560" text-anchor="middle" fill="#6b7280">FUTURE (v2)</text>
+  <text class="title" x="845" y="580" text-anchor="middle" fill="#4b5563">Saved Products</text>
+  <text class="note" x="845" y="599" text-anchor="middle" fill="#6b7280">watch list</text>
+  <text class="note" x="845" y="615" text-anchor="middle" fill="#6b7280">after login</text>
+
+  <rect class="future" x="955" y="542" width="180" height="83" rx="8"/>
+  <text class="tag" x="1045" y="560" text-anchor="middle" fill="#6b7280">FUTURE (v2)</text>
+  <text class="title" x="1045" y="580" text-anchor="middle" fill="#4b5563">Price Alerts</text>
+  <text class="note" x="1045" y="599" text-anchor="middle" fill="#6b7280">target prices · history</text>
+  <text class="note" x="1045" y="615" text-anchor="middle" fill="#6b7280">after login</text>
+
+  <!-- ===== Legend ===== -->
+  <g transform="translate(35,662)">
+    <rect x="0" y="0" width="1090" height="50" rx="8" fill="#f9fafb" stroke="#e5e7eb"/>
+    <rect class="root" x="16" y="16" width="28" height="18" rx="4"/>
+    <text class="note" x="52" y="30">Entry screen</text>
+    <rect class="v1" x="160" y="16" width="28" height="18" rx="4"/>
+    <text class="note" x="196" y="30">v1 screen (public, no login)</text>
+    <rect class="ext" x="390" y="16" width="28" height="18" rx="4"/>
+    <text class="note" x="426" y="30">External site (leaves app)</text>
+    <rect class="future" x="610" y="16" width="28" height="18" rx="4"/>
+    <text class="note" x="646" y="30">Future v2 (login required)</text>
+    <path class="edge" d="M830,25 H870" marker-end="url(#arrow)"/>
+    <text class="note" x="880" y="30">Navigation · Back returns to parent</text>
+  </g>
+</svg>
